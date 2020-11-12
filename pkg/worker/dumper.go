@@ -97,7 +97,7 @@ func (d *MyDumper) FindDumpedFiles() ([]string, error) {
 		return nil, err
 	}
 
-	_, err = d.FindDumpingFiles()
+	d.dumpingFiles, err = d.FindDumpingFiles()
 	if err != nil {
 		return nil, err
 	}
