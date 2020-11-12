@@ -3,8 +3,8 @@ package worker
 import (
 	"context"
 	"github.com/google/uuid"
-	"github.com/minio/minio-go"
-	"github.com/minio/minio-go/pkg/credentials"
+	"github.com/minio/minio-go/v7"
+	"github.com/minio/minio-go/v7/pkg/credentials"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/klog"
 	"os"
