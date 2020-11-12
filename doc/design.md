@@ -1,6 +1,6 @@
 # s3uploader work process
 1. mydumper dump mysql data to lock disk, set appropriate file size
-2. when mydumper dumping the data, s3uploader upload the data to minio
+2. when mydumper dumping the data, s3uploader upload the data to minio,then rm file in lock disk
 3. when all files  uploaded, s3uploader process exit.
 
 # we should solve some problems

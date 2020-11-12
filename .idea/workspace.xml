@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bb44894-eac1-4682-bcba-0adae1f42d33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/doc/design.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/.b.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s3uploader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/app/uploader.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/app/uploader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/design.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/design.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/worker/dumper.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/worker/dumper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/worker/uploader.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/worker/uploader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/worker/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/worker/worker.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +50,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1k532RYzFiH3fbpkHy2EKf4XdlW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,31 +90,22 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build s3uploader/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build s3uploader" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="s3uploader" />
       <working_directory value="$PROJECT_DIR$" />
-      <parameters value="--target-path=$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="s3uploader" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build s3uploader/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
+      <module name="s3uploader" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="--target-path=$PROJECT_DIR$/data --process-name=vim" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/cmd/main.go" />
       <package value="s3uploader/cmd" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build upload/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="s3uploader" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/cmd/main.go" />
-      <package value="upload/cmd" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build upload/pkg" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="s3uploader" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/pkg/util.go" />
-      <package value="upload/pkg" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -111,16 +120,10 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Go Build.go build s3uploader/cmd" />
-      <item itemvalue="Go Build.go build upload/cmd" />
-      <item itemvalue="Go Build.go build upload/pkg" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build s3uploader/cmd" />
-        <item itemvalue="Go Build.go build upload/cmd" />
-        <item itemvalue="Go Build.go build upload/pkg" />
+        <item itemvalue="Go Build.go build s3uploader" />
       </list>
     </recent_temporary>
   </component>
@@ -138,52 +141,72 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GO111MODULE" value="off" />
+      </map>
+    </environment>
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605150667979">
+    <state x="520" y="290" key="#Go_Modules" timestamp="1605169094873">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605150667979" />
+    <state x="520" y="290" key="#Go_Modules/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605169094873" />
+    <state x="184" y="112" width="1071" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605172944131">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" width="1071" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605172944131" />
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604993486730">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604993486730" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1605154281485">
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1605177497321">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281485" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497321" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.0.1440.831@0.0.1440.831" timestamp="1605148574929" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1605154281484">
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1605177497319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281484" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497319" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/1440.23.1920.1057/0.0.1440.831@0.0.1440.831" timestamp="1605148574927" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1605154281483">
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1605177497318">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281483" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497318" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/1440.23.1920.1057/0.0.1440.831@0.0.1440.831" timestamp="1605148574926" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1605154281484">
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1605177497320">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281484" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497320" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/1440.23.1920.1057/0.0.1440.831@0.0.1440.831" timestamp="1605148574928" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605154281489">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605177497325">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281489" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605154281487">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497325" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605177497323">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281487" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605154281486">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497323" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605177497322">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281486" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605154281488">
+    <state width="1398" height="304" key="GridCell.Tab.1.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497322" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605177497324">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605154281488" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605177497324" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1605172733085">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605172733085" />
     <state x="418" y="205" width="604" height="490" key="find.popup" timestamp="1605148519835">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -197,9 +220,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pkg/worker/worker.go</url>
-          <line>111</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/pkg/util/util.go</url>
+          <line>35</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pkg/worker/dumper.go</url>
+          <line>98</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
