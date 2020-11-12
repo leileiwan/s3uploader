@@ -10,7 +10,8 @@ type Worker struct {
 	uploader      Uploader
 	dumper Dumper
 	uploadableFiles []string
-	signal chan bool
+	signal1 chan bool
+	signal2 chan bool
 
 }
 
@@ -26,32 +27,36 @@ func NewWorker(endpoint,accessKeyID,secretAccessKey,bucket ,contentType,region s
 		uploader: uploader,
 		dumper: NewMyDumper(processName,targetPath),
 		uploadableFiles: []string{},
-		signal: make(chan bool,1),
+		signal1: make(chan bool,1),
+		signal2: make(chan bool,1),
 	},nil
 }
 
 
 func (w *Worker)Run(ctx context.Context,cancel context.CancelFunc){
+	w.signal1 <- true
 	go func(){
 		for {
-			w.signal <- true
+			<- w.signal1
 			_,err:=w.findUploadableFiles()
 			if err!=nil{
 				cancel()
 				return
 			}
+			w.signal2 <- true
 		}
 	}()
 
 
 	go func(ctx context.Context){
 		for {
-			<- w.signal
+			<- w.signal2
 			err:=w.upload(ctx)
 			if err!=nil{
 				cancel()
 				return
 			}
+			w.signal1 <- true
 		}
 	}(ctx)
 
