@@ -47,7 +47,7 @@ Flags:
 [deign](./doc/design.md)
 
 # TODO
-Beacuse I have many tasks to do for my graduation project, some  features can be added to make s3uploader better.
+some  features can be added to make s3uploader better(many tasks need to do for my graduation project).
 * unit test
 * verify upload files is the same as local files in disks
     * compute file hash value, then verify it 
