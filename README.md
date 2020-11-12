@@ -1,5 +1,5 @@
 # What's S3Uploader
-S3Uploader is a data upload tool to upload dumped(mydumper) data to s3 object storage.
+S3Uploader is a data upload tool to upload dumped(mysql/mydumper) data to s3 object storage.
 
 It still can upload data when local disk is not enough.
 
@@ -41,3 +41,7 @@ Flags:
       --target-path string         dump mysql data target path (default "/data")
       --use-ssl                    use ssl (default true)
 ```
+
+
+# how it works
+[deign](./doc/design.md)
